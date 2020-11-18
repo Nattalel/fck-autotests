@@ -15,16 +15,18 @@ public class DataEntry {
         $("#second_name").sendKeys(middlename);
     }
 
-    @Step("Ввод в поле Категория контакта")
-    public void categotyCont() {
-        // Кликаем на выпадающий список в разделе "Категория контакта"
-        $x("//*[@name=\"contact_category\"]").click();
-        // Выбираем "Сотрудник предприятия"
-        $x("//*[@value=\"employee\"]").click();
 
-        //проверяем, что выпадающее меню-список отображается
-        //$x("//*[@class=\"topnav all\"]//ul[@class=\"dropdown-menu\"]").should(Condition.appear);
-    }
+
+//    @Step("Ввод в поле Категория контакта")
+//    public void categotyCont() {
+//        // Кликаем на выпадающий список в разделе "Категория контакта"
+//        $x("//*[@name=\"contact_category\"]").click();
+//        // Выбираем "Сотрудник предприятия"
+//        $x("//*[@value=\"employee\"]").click();
+//
+//        //проверяем, что выпадающее меню-список отображается
+//        //$x("//*[@class=\"topnav all\"]//ul[@class=\"dropdown-menu\"]").should(Condition.appear);
+//    }
 
     @Step("Ввод в поле Предприятие")
     public void company() {

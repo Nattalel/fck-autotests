@@ -34,7 +34,7 @@ public class CreateIndividual {
 
         // 2. В выпадающем списке выбрать пункт «Физические лица»
         PhysicalPerson physicalPerson = page(PhysicalPerson.class);
-        physicalPerson.createPhysicalPerson();
+        //physicalPerson.createPhysicalPerson();
 
         // 3. В меню модуля выбрать пункт «Создать новое физическое лицо».
         physicalPerson.createNewPhysicalPerson();
@@ -46,7 +46,7 @@ public class CreateIndividual {
                         ContactInfo.TEST_CONTACTINFO.getMiddlename());
 
         // 7. Заполнение поля «Категория контакта»
-        dataEntry.categotyCont();
+        //dataEntry.categotyCont();
 
         // 8. Заполнение поля  «Предприятие»
         dataEntry.company();

@@ -1,23 +1,29 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import lombok.Getter;
+import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PhysicalPerson {
 
-    @Step("Создание физического лица")
-    public void createPhysicalPerson() {
+    @FindBy(xpath = "//*[@class=\"topnav all\"]//a[@id=\"moduleTab_9_Физические лица\"]")
+    @Getter
+    private SelenideElement clickPhysPers;
 
-        // Клик на пункт «Физические лица»
-        $x("//*[@class=\"topnav all\"]//a[@id=\"moduleTab_9_Физические лица\"]").click();
+    @FindBy(xpath = "//*[@class=\"dashboard\"]")
+    @Getter
+    private SelenideElement ShouldNotHomePage;
 
-        // Проверяем, что домашняя страница закрыта
-        $x("//*[@class=\"dashboard\"]").shouldNot(Condition.appear);
-        // Проверяем, что открыта форма просмотра модуля «Физические лица»
-        $x("//*[@class=\"list-view-rounded-corners\"]").should(Condition.appear);
-    }
+    @FindBy(xpath = "//*[@class=\"list-view-rounded-corners\"]")
+    @Getter
+    private SelenideElement ShouldOpenPhysPers;
+
+
+
 
     @Step("Создание нового физического лица")
     public void createNewPhysicalPerson() {
