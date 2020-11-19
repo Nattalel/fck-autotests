@@ -1,10 +1,10 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-
+import lombok.Getter;
+import org.openqa.selenium.support.FindBy;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
 
 public class DataEntry {
 
@@ -15,42 +15,52 @@ public class DataEntry {
         $("#second_name").sendKeys(middlename);
     }
 
+    // Заполнение поля «Категория контакта»
+    @FindBy(xpath = "//*[@value=\"employee\"]")
+    @Getter
+    private SelenideElement clickCompanyEmployee;
 
+    // Заполнение поля  «Предприятие»
+    @FindBy(xpath = "//*[@class=\"popupBody\"]")
+    @Getter
+    private SelenideElement shouldFieldCompany;
 
-//    @Step("Ввод в поле Категория контакта")
-//    public void categotyCont() {
-//        // Кликаем на выпадающий список в разделе "Категория контакта"
-//        $x("//*[@name=\"contact_category\"]").click();
-//        // Выбираем "Сотрудник предприятия"
-//        $x("//*[@value=\"employee\"]").click();
-//
-//        //проверяем, что выпадающее меню-список отображается
-//        //$x("//*[@class=\"topnav all\"]//ul[@class=\"dropdown-menu\"]").should(Condition.appear);
-//    }
-
-    @Step("Ввод в поле Предприятие")
-    public void company() {
-        // Кликаем на стрелочку
-        $x("//*[@name=\"btn_account_name\"]").click();
-        //Проверяем, что форма поиска предприятия.
-        //$x("//*[@class=\"popupBody\"]").should(Condition.appear);
-
-    }
-
-
-    @Step("Заполняем инн")
-    public void ContInInn(String inn) {
+    @Step("Вводим ИНН")
+    public void contInInn(String inn) {
         $("#inn_advanced").sendKeys(inn);
     }
 
+    @FindBy(xpath = "//*[@class=\"oddListRowS1\"]//a")
+    @Getter
+    private SelenideElement clickSearchCompany;
 
-    @Step("Ввод в поле Предприятие")
-    public void search() {
-        // Нажимаем кнопку "Найти"
-        $x("//*[@id=\"search_form_submit\"]").click();
+    //@FindBy(xpath = "//*[@class=\"panel-content\"]")
+//    @FindBy(xpath = "//*[@id=\"EditView_tabs\"]")
+//    @Getter
+//    private SelenideElement shouldCreatePhysPers;
 
+    @Step("Вводим Должность")
+    public void basicInfoPosition(String position) {
+        $("#position").sendKeys(position);
     }
 
+    @Step("Вводим контактные данные - Телефон, E-mail")
+    public void contactData(String phone, String email) {
+        $(".phone_number").sendKeys(phone);
+        $("#Contacts0emailAddress0").sendKeys(email);
+    }
 
+    // Сохранить и выйти
+    @FindBy(xpath = "//*[@class=\"button primary\"]")
+    @Getter
+    private SelenideElement clickSaveAndExit;
+
+    @FindBy(xpath = "//*[@accesskey=\"a\"]")
+    @Getter
+    private SelenideElement clickSaveAndExitTwo;
+
+    @FindBy(xpath = "//*[@class=\"detail-view\"]")
+    @Getter
+    private SelenideElement shouldFormPhPerson;
 
 }

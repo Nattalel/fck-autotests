@@ -20,12 +20,10 @@ public class MainPage {
     @Getter
     private SelenideElement allTab;
 
-
     @FindBy(xpath = "//*[@class=\"topnav all\"]//ul[@class=\"dropdown-menu\"]")
     //аннотация для генерации геттера
     @Getter
     private SelenideElement allDropdown;
-
 
     @Step("Выход из приложения")
     public void logOut() {
