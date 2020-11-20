@@ -25,7 +25,7 @@ public class CreateTest extends BaseTest {
     private String lastName;
     private String secondName;
     private String category;
-    private String copmany;
+    private String company;
     private String position;
     private String phone;
     private String mail;
@@ -103,9 +103,9 @@ public class CreateTest extends BaseTest {
                 ContactInfo.TEST_CONTACTINFO.getMiddlename());
 
         //Получаем введенные значения ФИО
-        firstName = $(By.xpath("//*[@id=\"first_name\"]")).getValue();
-        lastName = $(By.xpath("//*[@id=\"last_name\"]")).getValue();
-        secondName = $(By.xpath("//*[@id=\"second_name\"]")).getValue();
+        firstName = $(By.id("first_name")).getValue();
+        lastName = $(By.id("last_name")).getValue();
+        secondName = $(By.id("second_name")).getValue();
 
     }
 
@@ -157,7 +157,7 @@ public class CreateTest extends BaseTest {
         // Проверяем, что поле «Предприятие» заполнено значением, выбранным из списка предприятий.
         $(By.name("account_name")).shouldHave(exactValue(fieldCompany));
         // Получаем введенное значение предприятия
-        copmany = $(By.xpath("//*[@id=\"account_name\"]")).val();
+        company = $(By.id("account_name")).val();
 
     }
 
@@ -165,7 +165,7 @@ public class CreateTest extends BaseTest {
     public void entryFieldPosition(DataEntry dataEntry) {
         dataEntry.basicInfoPosition(ContactInfo.TEST_CONTACTINFO.getPosition());
         // Получаем введенное значение должности
-        position = $(By.xpath("//*[@id=\"position\"]")).val();
+        position = $(By.id("position")).val();
     }
 
     @Step("Шаг 13-14. Заполнение Контактных данных (Телефон и E-mail")
@@ -173,7 +173,7 @@ public class CreateTest extends BaseTest {
         dataEntry.contactData(ContactData.TEST_CONTACTDATA.getPhone(),
                 ContactData.TEST_CONTACTDATA.getEmail());
         phone = $(By.xpath("//*[@type=\"phone\"]")).val();
-        mail = $(By.xpath("//*[@id=\"Contacts0emailAddress0\"]")).val();
+        mail = $(By.id("Contacts0emailAddress0")).val();
     }
 
     @Step("Шаг 15. Нажатие на кнопку «Сохранить и выйти»")
@@ -201,7 +201,7 @@ public class CreateTest extends BaseTest {
         // Проверка категории контакта
         enterValues.getShouldCotegoryCont().shouldHave(text(category));
         // Проверка предприятия
-        $(By.id("account_id")).shouldHave(text(copmany));
+        $(By.id("account_id")).shouldHave(text(company));
         // Проверка должности
         $(By.id("position_id")).shouldHave(text(position));
         // Проверка телефона
