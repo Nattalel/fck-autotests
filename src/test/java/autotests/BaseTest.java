@@ -25,7 +25,7 @@ public class BaseTest {
     public void startUp() {
         // открытие приложения
         log.info("Начинаем тестирование");
-        open("http://fckproject.itfbgroup.ru/fcktest_001/");
+        open("http://fckproject.itfbgroup.ru/auto/");
     }
 
     @AfterMethod(description = "Выход из приложения")

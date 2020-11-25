@@ -1,4 +1,4 @@
-package pages;
+package pages.createTest;
 
 import io.qameta.allure.Step;
 

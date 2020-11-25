@@ -9,7 +9,7 @@ import io.qameta.allure.TmsLink;
 import lombok.extern.log4j.Log4j;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import pages.createTest.LoginPage;
 import pages.MainPage;
 import utils.User;
 

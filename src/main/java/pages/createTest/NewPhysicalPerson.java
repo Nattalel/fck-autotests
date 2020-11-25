@@ -1,4 +1,4 @@
-package pages;
+package pages.createTest;
 
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;

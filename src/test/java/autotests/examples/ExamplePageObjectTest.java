@@ -7,7 +7,7 @@ import io.qameta.allure.Step;
 import io.qameta.allure.TmsLink;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import pages.createTest.LoginPage;
 import pages.MainPage;
 import utils.User;
 

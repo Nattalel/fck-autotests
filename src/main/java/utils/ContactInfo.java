@@ -14,25 +14,44 @@ public enum ContactInfo {
     private final String inn;
     private final String position;
 
-    @Step("Получение Фамилии")
+//    @Step("Получение Фамилии")
+//    public String getSurname() {
+//        return surname;
+//    }
+//    @Step("Получение Имени")
+//    public String getName() {
+//        return name;
+//    }
+//    @Step("Получение Отчества")
+//    public String getMiddlename() {
+//        return middlename;
+//    }
+//    @Step("Получение Инн")
+//    public String getInn() {
+//        return inn;
+//    }
+//    @Step("Получение Должности")
+//    public String getPosition() {
+//        return position;
+//    }
+
     public String getSurname() {
         return surname;
     }
-    @Step("Получение Имени")
+
     public String getName() {
         return name;
     }
-    @Step("Получение Отчества")
+
     public String getMiddlename() {
         return middlename;
     }
-    @Step("Получение Инн")
+
     public String getInn() {
         return inn;
     }
-    @Step("Получение Должности")
+
     public String getPosition() {
         return position;
     }
-
 }

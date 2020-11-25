@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
+import pages.createTest.*;
 import utils.ContactData;
 import utils.ContactInfo;
 import utils.User;
