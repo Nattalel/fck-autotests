@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum ContactInfo {
 
-    TEST_CONTACTINFO("Авто1", "Тест", "Тестович", "6321277661", "Менеджер");
+    TEST_CONTACTINFO("Авто4", "Тест", "Тестович", "6321277661", "Менеджер");
     private final String surname;
     private final String name;
     private final String middlename;

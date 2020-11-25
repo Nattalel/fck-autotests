@@ -47,11 +47,11 @@ public class TestTK_A4 extends BaseTest {
         entryEmail(dataEntryAppeals);
         clickSearch(dataEntryAppeals);
         clickChoicePhysPerson(dataEntryAppeals);
-        fillFieldCategory(dataEntryAppeals);
-        fillFieldSubtype(dataEntryAppeals);
-        fillFieldTopic(dataEntryAppeals);
-        fillFieldSubject(dataEntryAppeals);
-        fillFieldDescription(dataEntryAppeals);
+//        fillFieldCategory(dataEntryAppeals);
+//        fillFieldSubtype(dataEntryAppeals);
+//        fillFieldTopic(dataEntryAppeals);
+//        fillFieldSubject(dataEntryAppeals);
+//        fillFieldDescription(dataEntryAppeals);
 
     }
 
@@ -168,12 +168,12 @@ public class TestTK_A4 extends BaseTest {
     public void fillFieldCategory(DataEntryAppeals dataEntryAppeals) {
 
         // Клик на поле «Категория»
-        $(By.name("category")).click();
-       // $(By.id("category")).click();
-        //Клик на значение «Сотрудник ФЦК»
-        dataEntryAppeals.getWorkerFck().click();
-        // Проверка, что поле «Категория» заполнено необходимым значением.
-        $(By.id("category")).shouldNot(empty);
+//        $(By.name("category")).click();
+//       // $(By.id("category")).click();
+//        //Клик на значение «Сотрудник ФЦК»
+//        dataEntryAppeals.getWorkerFck().click();
+//        // Проверка, что поле «Категория» заполнено необходимым значением.
+//        $(By.id("category")).shouldNot(empty);
 
     }
 
@@ -182,11 +182,11 @@ public class TestTK_A4 extends BaseTest {
     public void fillFieldSubtype(DataEntryAppeals dataEntryAppeals) {
 
         // Клик на поле «Категория»
-        $(By.id("subtype")).click();
-        //Клик на значение «Сотрудник ФЦК»
-        dataEntryAppeals.getSubtypeInvitation().click();
-        // Проверка, что поле «Подтип» заполнено необходимым значением.
-        $(By.id("subtype")).shouldNot(empty);
+//        $(By.id("subtype")).click();
+//        //Клик на значение «Сотрудник ФЦК»
+//        dataEntryAppeals.getSubtypeInvitation().click();
+//        // Проверка, что поле «Подтип» заполнено необходимым значением.
+//        $(By.id("subtype")).shouldNot(empty);
 
     }
 
@@ -195,11 +195,11 @@ public class TestTK_A4 extends BaseTest {
     public void fillFieldTopic(DataEntryAppeals dataEntryAppeals) {
 
         // Клик на поле «Тема»
-        $(By.id("subject")).click();
-        //Клик на значение «Мероприятие»
-        dataEntryAppeals.getTopicEvent().click();
-        // Проверка, что поле «Тема» заполнено.
-        $(By.id("subject")).shouldNot(empty);
+//        $(By.id("subject")).click();
+//        //Клик на значение «Мероприятие»
+//        dataEntryAppeals.getTopicEvent().click();
+//        // Проверка, что поле «Тема» заполнено.
+//        $(By.id("subject")).shouldNot(empty);
 
     }
 
@@ -209,23 +209,23 @@ public class TestTK_A4 extends BaseTest {
 
         // Клик на поле  «Подтема»
         //$(By.id("subsubject")).click();
-        $(By.name("subsubject")).click();
-        //Клик на значение «Другое»
-        //dataEntryAppeals.getSubsubjectOther().click();
-        // Проверка, что поле «Подтема» заполнено.
-        $(By.id("subsubject")).shouldNot(empty);
+//        $(By.name("subsubject")).click();
+//        //Клик на значение «Другое»
+//        //dataEntryAppeals.getSubsubjectOther().click();
+//        // Проверка, что поле «Подтема» заполнено.
+//        $(By.id("subsubject")).shouldNot(empty);
 
     }
 
     @Step("Шаг 13. В поле «Описание» вручную ввести текст – «Текст описания»")
     public void fillFieldDescription(DataEntryAppeals dataEntryAppeals) {
 
-        // Ввод текста в поле «Описание»
-        dataEntryAppeals.entryBasicInfo(BasicInfo.TEST_DESCRIPTION.getDescript());
-        // Проверка, что поле «Описание» заполнено необходимым значением.
-        $(By.id("tinymce")).shouldHave(Condition.
-                value(BasicInfo.TEST_DESCRIPTION.getDescript()));
-
+//        // Ввод текста в поле «Описание»
+//        dataEntryAppeals.entryBasicInfo(BasicInfo.TEST_DESCRIPTION.getDescript());
+//        // Проверка, что поле «Описание» заполнено необходимым значением.
+//        $(By.id("tinymce")).shouldHave(Condition.
+//                value(BasicInfo.TEST_DESCRIPTION.getDescript()));
+//
 
     }
 
