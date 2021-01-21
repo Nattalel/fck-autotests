@@ -1,4 +1,4 @@
-package pages.TK_A8;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
@@ -14,4 +14,9 @@ public class ModuleAdmin {
     @FindBy(xpath = "//*[@class=\"desktop-bar\"]//*[@id=\"admin_link\"]")
     @Getter
     private SelenideElement fieldAdmin;
+
+    // Проверка,что модуль "Администрирование" открыт
+    @FindBy(xpath = "//*[@id=\"pagecontent\"]//h2")
+    @Getter
+    private SelenideElement shouldfieldAdmin;
 }

@@ -6,12 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class CreateAppeals {
 
+    //Клик на пункт «Создать обращение»
     @FindBy(xpath = "(//*[@class=\"actionmenulink\"])[1]")
     @Getter
     private SelenideElement clickCreateAppeals;
-
-    @FindBy(xpath = "//*[@class=\"moduleTitle\"]")
-    @Getter
-    private SelenideElement shouldCreateAppeals;
 
 }

@@ -1,4 +1,4 @@
-package pages.TK_A8;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class LogViewport {
 
-    //Клик на настройки конфигурации
-    @FindBy(xpath = "")
+    //Клик на просмотр журнала
+    @FindBy(xpath = "(//*[@target=\"_blank\"])[1]")
     @Getter
     private SelenideElement clickViewLog;
 
